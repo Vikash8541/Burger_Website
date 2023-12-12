@@ -92,6 +92,7 @@ box-shadow: -1px 6px 43px -9px rgba(0,0,0,0.75);
     color: var(--third);
 }
 .nav-links li a:hover{
+    color: var(--second) !important;
     background-color: #000;
 
 }
