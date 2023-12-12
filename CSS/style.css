@@ -1,0 +1,549 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --prim: #fe3939;
+    --second: #ffffff;
+    --third:#000;
+    --para: #515050;
+    --poppins: "Poppins";
+    --Montserrat : "Montserrat";
+}
+#main{
+    overflow: hidden !important;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover !important;
+}
+::selection{
+    color: var(--prim);
+    background-color: var(--second);
+}
+.container{
+    width: 95% !important;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0 !important;
+}
+.add-cart-btn{
+    color: #000; 
+    font-weight:bold; 
+    font-size:14px; 
+    font-family:var(--Montserrat);
+    transition: color 0.5s ease;
+}
+.add-cart-btn:hover{
+    color: var(--prim);
+}
+/* =================Header work start================ */
+header{
+    z-index: 999 !important;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+header.show{
+    background-color:var(--second);
+    padding-bottom: 10px;
+    color: var(--third);
+    -webkit-box-shadow: -1px 6px 43px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 6px 43px -9px rgba(0,0,0,0.75);
+box-shadow: -1px 6px 43px -9px rgba(0,0,0,0.75);
+}
+.logo{
+    height: 28px;
+    overflow: hidden;
+}
+.logo a{
+    display: block;
+}
+/* header.show .nav-links li a:hover{
+    background-color: var(--third);
+    color: var(--second);
+} */
+.nav-links li a{
+    color: var(--second);
+    text-transform: uppercase;
+    font-family: var(--Montserrat);
+    font-weight: 550;
+    padding: 10px 18px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+.icons{
+    color: var(--second);
+}
+.nav-links li a.color, .icons.color{
+    color: var(--third);
+}
+.nav-links li a:hover{
+    background-color: #000;
+
+}
+.nav-links-res{
+    display: flex;
+    z-index: -1;
+    flex-direction: column;
+    top: 65px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: var(--second);
+    transition: all 0.5s ease;
+}
+.nav-links-res li a{
+    color: var(--third);
+    text-transform: uppercase;
+    font-family: var(--Montserrat);
+    font-weight: 500;
+}
+.nav-links-res.active{
+    left: 0%;
+}
+.nav-links-desk{
+    display: none;
+}
+
+
+
+/* ==================Header work end============= */
+
+
+/* ==================Home Banner work start============= */
+#home{
+    background: url(../Img/home-banner.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 200px 0 600px 0;
+    position: relative;
+}
+#home .text h3{
+    font-size: clamp(1.3rem, 4vw , 5rem);
+    font-weight: bold;
+    color: #8f94a6;
+    font-family: var(--Montserrat);
+}
+#home .text h1{
+    font-size: clamp(3.5rem , 12vw , 11rem);
+    line-height: 0.8;
+    letter-spacing: .5px;
+    font-weight: bold;
+    color: var(--second);
+    font-family: var(--Montserrat);
+}   
+.text .crispy-text .ellipse div:nth-child(1){
+    position: absolute;
+    left: -85px;
+    top: -95px;
+}
+.text .crispy-text .ellipse div:nth-child(2){
+    position: absolute;
+    left: -90px;
+    top: -65px;
+}
+.text .crispy-text .ellipse div:nth-child(3){
+    position: absolute;
+    left: -60px;
+    top: -45px;
+
+}
+#home .burger-img{
+    top: 270px;
+    left: auto;
+}
+.see-more-btn{
+    bottom: 120px;
+    left: auto;
+    background: #fe3939;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+
+
+/* ==================Home Banner work end============= */
+
+
+/* ==================About work start============= */
+.about-text h4{
+ background-color: var(--third);
+ color: var(--second);
+ text-transform: uppercase;
+ font-size: 13px;
+ font-family: var(--Montserrat);
+ padding: 10px 15px;
+ font-weight: 550;
+ border-radius: 15px;
+}
+.about-text h2{
+    color: var(--third);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-weight: bold;
+}
+.about-text p, .big-items p,.items-menu p{
+        color: var(--para);
+        font-family: var(--poppins);
+        line-height: 1.8;
+}
+.about-text h6{
+        color: var(--para);
+        font-family: var(--poppins);
+        line-height: 1.8;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 16px;
+}
+
+
+
+/* ==================About work end============= */
+
+
+/* ==================Special Offers works start============= */
+.special,.big-items h3{
+    font-size: 3.5rem;
+    color: var(--third);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.special{
+    font-size: clamp(1.9rem, 6vw, 3.5rem);
+}
+.tags-offers h6{
+    border:  2px solid #f4f4f4;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: var(--Montserrat);
+    color: #7b7b7b;
+    padding: 10px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.price-tag h6{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--Montserrat);
+}
+.price-tag .learn-more-btn{
+    background-color: var(--third);
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    color: var(--second);
+    letter-spacing: .5px;
+    border-radius: 50px;
+    font-size: 13px;
+}
+.big-items .new-town{
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    background-color: var(--prim);
+    color: var(--second);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--Montserrat);
+    border-radius: 5px;
+    padding: 10px 12px;
+}
+
+.items-list{
+    background-color: #fbf8f6;
+    padding: 50px 40px;
+    border-radius: 20px;
+}
+.items-list h6{
+    padding: 5px 6px;
+    border-radius: 10px;
+    color: var(--second);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--prim);
+}
+/* ==================Special Offers works end============= */
+
+/* ==================Menu Higlights work start============= */
+#menu{
+    background-color: #191a1d;
+    padding: 50px 0;
+    margin: 3rem 0;
+}
+.high-text h4{
+    background-color: var(--prim);
+    color: var(--second);
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--Montserrat);
+}
+.high-text h2{
+    font-size: clamp(1.5rem, 6vw, 3.5rem);
+    font-family: var(--Montserrat);
+    color: var(--second);
+    padding-right: clamp(20px, 7vw, 150px);
+    font-weight: bold;
+}
+.high-text p{
+    font-size: 1.2rem;
+    color: var(--second);
+    font-weight: bold;
+}
+.see-menu-btn{
+    font-size: 1.2rem;
+    border-radius: 40px;
+    color: var(--second);
+    background-color: transparent;
+    padding: 12px 30px;
+    font-weight: 550;
+    border: 2px solid #f4f4f4;
+    text-transform: uppercase;
+}
+.high-text-2{
+    padding-left: 6rem;
+}
+/* ==================Menu Higlights work end============= */
+
+/* ==================Menu items work start============= */
+.items-menu{
+    background-color: #fbf8f6;
+    padding: 20px;
+    border-radius: 15px;
+}
+.menu-price-tag h6{
+    background-color: var(--prim);
+    color: var(--second);
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 5px 15px;
+    border-radius: 18px;
+    cursor: pointer;
+
+}
+/* ==================Menu items work end============= */
+
+
+/* ==================Testimonials work start============= */
+.test-text h5{
+    font-size: 3rem;
+    color: var(--prim);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+/* ==================Testimonials work end============= */
+
+/* ==================Footer work start============= */
+footer{
+    background-color: var(--second);
+    padding: 100px 0;
+}
+.footer-task p{
+    color: var(--para);
+    font-family: var(--poppins);
+    line-height: 1.8;
+    padding-right: 50px;
+}
+.social-logo-footer a{
+    color: var(--third);
+    font-size: 1.6rem;
+    transition: color 0.5s ease;
+}
+.social-logo-footer a:hover{
+    color: #4c4c4c;
+}
+.contact-footer div{
+    font-size: 1.2rem;
+    color: #515050;
+    font-weight: normal;
+}
+.footer-icon{
+    color: var(--prim);
+}
+.subscribe input,.subs-btn{
+    all: unset;
+    background-color: #f4f4f4;
+    padding: 13px 20px;
+    width: 80%;
+    text-align: center;
+    color: #515050;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.subscribe input:focus{
+    box-shadow: 0px 8px 30px 0px rgba(0,0,0,.2);
+}
+.subs-btn{
+    background-color: var(--prim);
+    color: var(--second);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--poppins);
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+/* ==================Footer work end============= */
+
+/* ==================Shop section work start============= */
+#shop-section{
+    margin-top: 200px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--second);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-main{
+    padding: 150px 0;
+
+}
+.links-shop a,.links-shop h6{
+    color: var(--para);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: var(--Montserrat);
+}
+
+.icon-cart{
+    position: relative;
+    
+}
+.cart-section{
+    background-color: #fdf8f8;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+.cart-section h5{
+    color: rgba(255,57,57,0.5);
+    font-size: 14px;
+    font-family: var(--Montserrat);
+    font-weight: bold;
+}
+.icon-cart div:nth-child(1){
+    font-size: clamp(2rem, 6vw, 6rem);
+}
+.icon-cart div:nth-child(2){
+    right: -30px;
+    bottom: 5px;
+    position: absolute;
+    font-size: clamp(1rem, 6vw, 2.5rem);
+}
+.shop-return-btn{
+    background-color: var(--prim);
+    font:15px;
+    color: var(--second);
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-family: var(--Montserrat);
+}
+
+
+/* ==================Shop section work end============= */
+
+
+
+/* ===========================Media queries work start ================= */
+@media (min-width:800px) and (max-width:1000px) {
+    .items-list{
+        padding: 35px 10px;
+
+    }
+    .items-stock{
+        align-items: normal;
+    }
+    .footer-task p{
+        padding-right: 0;
+    }
+}
+@media (min-width:768px) {
+    .nav-links-desk{
+        display: flex;
+    }
+    .items-menu img{
+        text-align: center;
+        width: 280px;
+        height: auto;
+    }
+}
+@media (max-width:767px) {
+    header{
+        padding: 1.1rem 0;
+    }
+    #home .burger-img {
+        top: 240px;
+        left: auto;
+    }
+    .ellipse{
+        transform: rotate(100deg);
+    }
+    .mobile{
+       margin-top: 2rem; 
+       margin-left: auto;
+       margin-right: 2rem;
+       margin-bottom: auto;
+    }
+    .big-items img,.big-items{
+        margin-left: 0 !important;
+    }
+    .row-items{
+        flex-wrap: wrap;
+    }
+    .big-items{
+        margin-top: 4rem;
+    }
+    .items-list{
+        padding: 50px 30px;
+    }
+    .high-text{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .test-text h2, .footer-task p{
+        padding-right: 0 !important;
+    }
+    .items-menu img{
+        text-align: center;
+        width: 280px;
+        height: auto;
+    }
+    footer{
+        padding: 20px 0;
+    }
+}
+@media (max-width:540px) {
+    #home{
+        padding: 180px 0 450px 0;
+    }
+    .see-more-btn{
+        bottom: 115px;
+    }
+}
+/* ===========================Media queries work end ================= */
